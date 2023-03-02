@@ -12,7 +12,8 @@
     "storybook-watcher": "sb-rn-watcher --config-path .ondevice",
     "update-stories": "sb-rn-get-stories --config-path .ondevice",
     "build-storybook": "build-storybook",
-    "storybook:web": "start-storybook -p 6006"
+    "storybook:web": "start-storybook -p 6006",
+    "storybook": "echo \"STORYBOOK=true\" > .env && yarn rnuc .env && yarn ios && echo \"STORYBOOK=false\" > .env && yarn env"
   },
   "dependencies": {
     "@react-native-async-storage/async-storage": "^1.17.11",
